@@ -1,0 +1,42 @@
+{
+  "name": "vite-vue-lib-template",
+  "private": true,
+  "version": "0.0.0",
+  "author": "Alvaro Saburido <hola@alvarosaburido.dev> (https://github.com/alvarosabu/)",
+  "type": "module",
+  "main": "./dist/vite-vue-lib.umd.cjs",
+  "module": "./dist/vite-vue-lib.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vite-vue-lib.js",
+      "require": "./dist/vite-vue-lib.umd.cjs"
+    },
+    "./*": "./dist/vite-vue-lib.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "vue",
+    "vite",
+    "lib"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.41"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.2.0",
+    "pathe": "^1.0.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3",
+    "vite-plugin-banner": "^0.6.1",
+    "vite-plugin-dts": "^1.7.1",
+    "vue-tsc": "^1.0.9"
+  }
+}
